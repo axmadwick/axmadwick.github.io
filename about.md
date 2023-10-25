@@ -1,5 +1,6 @@
 ---
 layout: main
+permalink: /about/
 ---
 
 <img src="{{site.url}}/images/me@300x300.jpg" alt="A photo of me">
