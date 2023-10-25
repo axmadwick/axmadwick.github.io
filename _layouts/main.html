@@ -52,6 +52,15 @@ layout: main
       font-family: 'Eater', cursive;
       margin: 0;
     }
+    nav ul {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    nav li {
+      list-style: none;
+      display: inline-block;
+      padding-right: 20px;
+    }
   </style>
 </head>
 
@@ -66,7 +75,18 @@ layout: main
   </header>
   <main>
     <div class="wrapper">
+      <nav>
+        <ul>
+          <li><a href="{{site.url}}">Home</a></li>
+          <li><a href="{{site.url}}/about">About</a></li>
+        </ul>
+      </nav>
       {{ content }}
+      <h2>Contact / Social</h2>
+      <p>Contact me about collaboration, questions about my music, or anything else you'd like to discuss</p>
+      <li>Email: <a href="mailto:axmadwick@gmail.com">axmadwick@gmail.com</a></li>
+      <li>Twitter: <a href="https://twitter.com/axmadwick">https://twitter.com/axmadwick</a></li>
+      <li>Instagram: <a href="https://www.instagram.com/ax_madwick/">https://www.instagram.com/ax_madwick/</a></li>
     </div>
   </main>
 </body>
