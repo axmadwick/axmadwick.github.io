@@ -110,13 +110,13 @@ At this period in life I started to open up to more mainstream hip hop and more 
 
 My intro to Lana Del Rey was hearing the song "West Coast" on the radio in the car. I did a double-take the first time I heard it, like "wait that was really good, I don't usually hear anything I like that much on the radio". After hearing the song I streamed the whole album on Spotify was a fan in short order. I have gone through many Lana Del Rey phases since then and still as of the time of writing there are some albums I haven't listened to at all like Honeymoon, but she's been a huge part of my musical life since first hearing her.
 
-## Parenthood #2 (2016 - Present)
-
 ### Anderson .Paak - Malibu
 
 <img src="{{site.url}}/images/influences/anderson_paak_malibu.jpg" alt="Cover art of Malibu by Anderson .Paak" loading="lazy">
 
 My introduction to Anderson .Paak was actually through the artist Tokimonsta, whose music he's been featured on a few times. This lead me to his album Malibu, which has continued to open me up to more soulful R&B. I remember my brother having his med-school graduation party around this time and sending him "Am I Wrong" to put on the playlist. 
+
+## Parenthood #2 (2016 - Present)
 
 ### Freddie Gibbs and Madlib - Piñata
 
