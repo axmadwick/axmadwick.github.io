@@ -7,14 +7,34 @@ layout: main
 </div>
 <div class="track__links">
 	<h3>Listen</h3>
-	<p>COMING SOON!</p>
-	<!-- <ul>
-		<li><a href="https://open.spotify.com/album/0S0FjxRM31tmLk7rfm2VVo?si=u-aXUvm3Tl2vWoKiAfv90w"><img src="{{site.url}}/images/spotify_logo_green.png" width="80"></a></li>
-		<li><a href="https://soundcloud.com/ax-madwick/like-me"><img src="{{site.url}}/images/soundcloud_logo_2.png" width="120"></a></li>
-		<li><a href="https://music.apple.com/us/album/like-me-feat-ntj-talk-single/1714926220"><img src="{{site.url}}/images/apple_music_logo.svg" width="80"></a></li>
-		<li><a href="https://www.youtube.com/watch?v=qcy037azUBQ"><img src="{{site.url}}/images/youtube_logo.svg" width="100"></a></li>
+	<ul>
+		<li><a href="https://tidal.com/browse/album/327690010">
+			<img width="120" src="{{site.url}}/images/tidal_logo.png" alt="Tidal logo">
+		</a></li>
+		<!--
+		<li>
+			<a href="https://open.spotify.com/album/0S0FjxRM31tmLk7rfm2VVo?si=u-aXUvm3Tl2vWoKiAfv90w">
+				<img src="{{site.url}}/images/spotify_logo_green.png" width="80">
+			</a>
+		</li>
+		<li>
+			<a href="https://soundcloud.com/ax-madwick/like-me">
+				<img src="{{site.url}}/images/soundcloud_logo_2.png" width="120">
+			</a>
+		</li>
+		-->
+		<li>
+			<a href="https://music.apple.com/us/album/dont-let-me-down-single/1715642657">
+				<img src="{{site.url}}/images/apple_music_logo.svg" width="80">
+			</a>
+		</li>
+		<li>
+			<a href="https://www.youtube.com/watch?v=JUjT26_oeRI">
+				<img src="{{site.url}}/images/youtube_logo.svg" width="100">
+			</a>
+		</li>
 	</ul>
-	<p>...or just search in the streaming service of your choice...</p>  -->
+	<p>...or just search in the streaming service of your choice...</p>
 	<h3>The Story</h3>
 	<p>
 		An electronic jazz journey through different time signatures and tempos, featuring sliced piano, sliced and processed vocals, electronic drums, synth bass, and a trumpet sample.
