@@ -15,14 +15,13 @@ layout: main
 			</a>
 		</li>
 
-		<!--
 		<li>
-			<a href="https://open.spotify.com/track/4FkX9fRpB4U45cGvkiko1p?si=c59f01f8ea144ae4">
+			<a href="https://open.spotify.com/album/5hfdujhh9CWf3lUw2kTdgd?si=Jd1HuguJQgiRS-e1ZIGYag">
 				<img src="{{site.url}}/images/spotify_logo_green.png" width="80">
 			</a>
 		</li>
 		<li>
-			<a href="https://soundcloud.com/ax-madwick/dont-let-me-down">
+			<a href="https://soundcloud.com/ax-madwick/cant-you-see">
 				<img src="{{site.url}}/images/soundcloud_logo_2.png" width="120">
 			</a>
 		</li>
