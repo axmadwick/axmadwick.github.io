@@ -25,7 +25,6 @@ layout: main
 				<img src="{{site.url}}/images/soundcloud_logo_2.png" width="120">
 			</a>
 		</li>
-		-->
 		<li>
 			<a href="https://music.apple.com/us/album/cant-you-see-feat-rycon-single/1716969967">
 				<img src="{{site.url}}/images/apple_music_logo.svg" width="80">
