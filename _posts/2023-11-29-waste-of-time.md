@@ -24,13 +24,11 @@ layout: main
 				<img src="{{site.url}}/images/soundcloud_logo_2.png" width="120">
 			</a>
 		</li>
-		<!--
 		<li>
-			<a href="">
+			<a href="https://music.apple.com/us/album/waste-of-time-feat-ludabuddha-christian-diana-frank/1719269909">
 				<img src="{{site.url}}/images/apple_music_logo.svg" width="80">
 			</a>
 		</li>
-		-->
 		<li>
 			<a href="https://www.youtube.com/watch?v=jeDSN0x0EmM">
 				<img src="{{site.url}}/images/youtube_logo.svg" width="100">
