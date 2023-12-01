@@ -7,36 +7,38 @@ layout: main
 </div>
 <div class="track__links">
 	<h3>Listen</h3>
-	<p>COMING SOON!</p>
-	<!--
+
 	<ul>
-		<li><a href="">
+		<li><a href="https://tidal.com/browse/album/332242702">
 			<img width="120" src="{{site.url}}/images/tidal_logo.png" alt="Tidal logo">
 		</a></li>
+		<!--
 		<li>
 			<a href="">
 				<img src="{{site.url}}/images/spotify_logo_green.png" width="80">
 			</a>
 		</li>
+		-->
 		<li>
-			<a href="">
+			<a href="https://soundcloud.com/ax-madwick/waste-of-time">
 				<img src="{{site.url}}/images/soundcloud_logo_2.png" width="120">
 			</a>
 		</li>
+		<!--
 		<li>
 			<a href="">
 				<img src="{{site.url}}/images/apple_music_logo.svg" width="80">
 			</a>
 		</li>
+		-->
 		<li>
-			<a href="">
+			<a href="https://www.youtube.com/watch?v=jeDSN0x0EmM">
 				<img src="{{site.url}}/images/youtube_logo.svg" width="100">
 			</a>
 		</li>
 
 	</ul>
 	<p>...or just search in the streaming service of your choice...</p>
-	-->
 	<h3>The Story</h3>
 	<p>
 		An electronic/pop take on classic emo/punk vocals featuring guitar by <a href="https://www.instagram.com/ludabuddha_music/">Ludabuddha</a>
