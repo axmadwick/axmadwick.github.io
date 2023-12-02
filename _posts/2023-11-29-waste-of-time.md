@@ -12,13 +12,11 @@ layout: main
 		<li><a href="https://tidal.com/browse/album/332242702">
 			<img width="120" src="{{site.url}}/images/tidal_logo.png" alt="Tidal logo">
 		</a></li>
-		<!--
 		<li>
-			<a href="">
+			<a href="https://open.spotify.com/album/4CAmJuF2A6mbnKI1S4yYQM?si=LT41ImYpQZOvaOaSzPspLw">
 				<img src="{{site.url}}/images/spotify_logo_green.png" width="80">
 			</a>
 		</li>
-		-->
 		<li>
 			<a href="https://soundcloud.com/ax-madwick/waste-of-time">
 				<img src="{{site.url}}/images/soundcloud_logo_2.png" width="120">
