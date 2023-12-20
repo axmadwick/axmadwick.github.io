@@ -11,18 +11,18 @@ layout: main
 		<li><a href="https://tidal.com/browse/track/336109641">
 			<img width="120" src="{{site.url}}/images/tidal_logo.png" alt="Tidal logo">
 		</a></li>
-		<!--
 		<li>
-			<a href="https://open.spotify.com/album/4aMQoOgkc6sLtaU21hGHxf?si=xDuHClAtRtGd3Hy_k-_g4g">
+			<a href="https://open.spotify.com/album/7KpwhjrRkMPdA3lhiJsxF7?si=XnejT1bFQuaDvKXqkRRtOg">
 				<img src="{{site.url}}/images/spotify_logo_green.png" width="80">
 			</a>
 		</li>
 
 		<li>
-			<a href="https://soundcloud.com/ax-madwick/forever">
+			<a href="https://soundcloud.com/ax-madwick/keep-the-faith">
 				<img src="{{site.url}}/images/soundcloud_logo_2.png" width="120">
 			</a>
 		</li>
+		<!--
 		<li>
 			<a href="https://music.apple.com/us/album/forever-single/1719789213">
 				<img src="{{site.url}}/images/apple_music_logo.svg" width="80">
