@@ -35,7 +35,7 @@ layout: main
 
 	</ul>
 
-	<!-- <p>...or just search in the streaming service of your choice...</p> -->
+	<p>...or just search in the streaming service of your choice...</p>
 	<h3>The Story</h3>
 	<p>
 		Poppy, uplifting piece written around an <a href="https://www.looperman.com/acapellas/detail/22146/keep-the-faith-main-vocals-92bpm-pop-acapella">acapella</a> provided by <a href="https://soundcloud.com/silverbellasings">Silver Bella</a> via <a href="https://www.looperman.com">Looperman</a>.
