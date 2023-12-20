@@ -7,17 +7,17 @@ layout: main
 </div>
 <div class="track__links">
 	<h3>Listen</h3>
-	<p>COMING SOON</p>
-	<!--
 	<ul>
-		<li><a href="https://tidal.com/browse/album/333121288">
+		<li><a href="https://tidal.com/browse/track/336109641">
 			<img width="120" src="{{site.url}}/images/tidal_logo.png" alt="Tidal logo">
 		</a></li>
+		<!--
 		<li>
 			<a href="https://open.spotify.com/album/4aMQoOgkc6sLtaU21hGHxf?si=xDuHClAtRtGd3Hy_k-_g4g">
 				<img src="{{site.url}}/images/spotify_logo_green.png" width="80">
 			</a>
 		</li>
+
 		<li>
 			<a href="https://soundcloud.com/ax-madwick/forever">
 				<img src="{{site.url}}/images/soundcloud_logo_2.png" width="120">
@@ -28,15 +28,15 @@ layout: main
 				<img src="{{site.url}}/images/apple_music_logo.svg" width="80">
 			</a>
 		</li>
+		-->
 		<li>
-			<a href="https://www.youtube.com/watch?v=WNDay_-ySgA">
+			<a href="https://www.youtube.com/watch?v=-jIp01pGsF0">
 				<img src="{{site.url}}/images/youtube_logo.svg" width="100">
 			</a>
 		</li>
 
 	</ul>
 	<p>...or just search in the streaming service of your choice...</p>
-	-->
 	<h3>The Story</h3>
 	<p>
 		Poppy, uplifting piece written around an <a href="https://www.looperman.com/acapellas/detail/22146/keep-the-faith-main-vocals-92bpm-pop-acapella">acapella</a> provided by <a href="https://soundcloud.com/silverbellasings">Silver Bella</a> via <a href="https://www.looperman.com">Looperman</a>.
