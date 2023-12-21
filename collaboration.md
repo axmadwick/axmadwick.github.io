@@ -17,7 +17,7 @@ Through encounters with other artists, I've observed that not everyone has the s
 
 In all successful musical collaborations I've been involved in over the course of 25 years in music I have never paid or been paid by another artist for collaboration. If we are working together on music we are a team, and we are in it together. First and foremost, let's make something dope together without money being exchanged in either direction.
 
-Secondly, as we all know, independent artists are making basically no money from streaming services. As such, I'm not really expecting to generate any revenue from my music. But in the off-chance that anything we make blows up, all parties involved in creating the music should benefit. The split should determined before release based on both how much each party contributed, and also what, if any, resources either party will be investing on promotion. Generally speaking I am turned off by contracts. Let's be civil and respectful of each other and come to a reasonable agreement.
+Secondly, as we all know, independent artists are making basically no money from streaming services. As such, I'm not really expecting to generate any revenue from my music. But in the off-chance that anything we make blows up, all parties involved in creating the music should benefit. The split should be determined before release based on both how much each party contributed, and also what, if any, resources either party will be investing on promotion. Generally speaking I am turned off by contracts. Let's be civil and respectful of each other and come to a reasonable agreement.
 
 ## Credit
 
