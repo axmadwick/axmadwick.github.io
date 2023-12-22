@@ -5,6 +5,8 @@ permalink: /collaboration/
 
 # Collaboration
 
+I am very interested in collaborating with like-minded artists to make dope music together.
+
 I have been collaborating with others to make music since I was in middle school 25 years ago, playing guitar in a band with my friends. 
 
 Since then there have been countless other bands and collaborative musical projects that I have been involved in. I like to collaborate with others on music because, as the idiom goes "the whole is greater than the sum of the parts". To be more specific when collaborating, each party brings their own creativity and strengths to the table. For example, I have a background playing drums and guitar, so I am pretty good at programming drum rhythms or composing lead instrument solos when producing. I also have a music technology degree and have taken 4 semesters of music theory so another one of my strengths is arrangement and structuring. But I know from years of experience that I'm not very good at singing (<a href="https://soundcloud.com/mpchadwick/sorry-valerie">here's a passable example of me singing</a>, I have very little range) and there are many instruments I do not know how to play. 
