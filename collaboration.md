@@ -5,7 +5,13 @@ permalink: /collaboration/
 
 # Collaboration
 
-I am very interested in collaborating with like-minded artists to make dope music together.
+## tl;dr;
+
+- **Philosophy:** I am very interested in collaborating with like-minded artists to make dope music together.
+- **Finance:** Let's use collaboration to build together and make dope music without either party paying the other. Let's all benefit if our music blows up.
+- **Credit:** I am interested in growing "AX MADWICK" as an artist / brand, but I am also interested in contributing to other artist's projects. Again, let's make some dope music together and then figure out how credit will be handled.
+
+## Philosophy
 
 I have been collaborating with others to make music since I was in middle school 25 years ago, playing guitar in a band with my friends. 
 
