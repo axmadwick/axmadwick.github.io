@@ -11,18 +11,18 @@ layout: main
 		<li><a href="https://tidal.com/browse/album/337478280">
 			<img width="120" src="{{site.url}}/images/tidal_logo.png" alt="Tidal logo">
 		</a></li>
-		<!--
+
 		<li>
-			<a href="https://open.spotify.com/album/7KpwhjrRkMPdA3lhiJsxF7?si=XnejT1bFQuaDvKXqkRRtOg">
+			<a href="https://open.spotify.com/album/0NOk84eeryqIdEkcB1X7jo?si=lZEya5MYTdu-xLw_q8kPXA">
 				<img src="{{site.url}}/images/spotify_logo_green.png" width="80">
 			</a>
 		</li>
-
 		<li>
-			<a href="https://soundcloud.com/ax-madwick/keep-the-faith">
+			<a href="https://soundcloud.com/ax-madwick/where-the-fights">
 				<img src="{{site.url}}/images/soundcloud_logo_2.png" width="120">
 			</a>
 		</li>
+		<!--
 		<li>
 			<a href="https://music.apple.com/mx/album/keep-the-faith-feat-silver-bella-remix-single/1722253926">
 				<img src="{{site.url}}/images/apple_music_logo.svg" width="80">
