@@ -22,13 +22,11 @@ layout: main
 				<img src="{{site.url}}/images/soundcloud_logo_2.png" width="120">
 			</a>
 		</li>
-		<!--
 		<li>
-			<a href="https://music.apple.com/mx/album/keep-the-faith-feat-silver-bella-remix-single/1722253926">
+			<a href="https://music.apple.com/us/album/where-the-fights-at-feat-jake-buzzard-single/1723513133">
 				<img src="{{site.url}}/images/apple_music_logo.svg" width="80">
 			</a>
 		</li>
-		-->
 		<li>
 			<a href="https://www.youtube.com/watch?v=HAvIFMg0ncc">
 				<img src="{{site.url}}/images/youtube_logo.svg" width="100">
