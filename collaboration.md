@@ -5,7 +5,7 @@ permalink: /collaboration/
 
 # Collaboration
 
-## tl;dr;
+## Summary
 
 - **Philosophy:** I am very interested in collaborating with like-minded artists to make dope music together.
 - **Finance:** Let's use collaboration to build together and make dope music without either party paying the other. Let's all benefit if our music blows up.
