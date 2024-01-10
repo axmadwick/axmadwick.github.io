@@ -8,16 +8,16 @@ layout: main
 <div class="track__links">
 	<h3>Listen</h3>
 	<ul>
-		<!--
-		<li><a href="https://tidal.com/browse/album/337478280">
+		<li><a href="https://tidal.com/browse/album/339162462">
 			<img width="120" src="{{site.url}}/images/tidal_logo.png" alt="Tidal logo">
 		</a></li>
 
 		<li>
-			<a href="https://open.spotify.com/album/0NOk84eeryqIdEkcB1X7jo?si=lZEya5MYTdu-xLw_q8kPXA">
+			<a href="https://open.spotify.com/album/6B5XOymJBE2B0szlZ0NSJw?si=vCZitYzrSb-dofc_oAq3XA">
 				<img src="{{site.url}}/images/spotify_logo_green.png" width="80">
 			</a>
 		</li>
+		<!--
 		<li>
 			<a href="https://soundcloud.com/ax-madwick/where-the-fights">
 				<img src="{{site.url}}/images/soundcloud_logo_2.png" width="120">
