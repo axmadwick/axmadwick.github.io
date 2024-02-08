@@ -88,6 +88,20 @@ layout: main
       font-size: 0.8rem;
       color: rgb(19, 0, 25);
     }
+    .footer-social-links ul {
+      margin: 0;
+      padding: 0;
+    }
+    .footer-social-links li {
+      list-style: none;
+      margin: 0;
+      display: inline-block;
+      padding-right: 10px;
+    }
+
+    .footer-social-links {
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 
@@ -114,9 +128,26 @@ layout: main
       {{ content }}
       <h2>Contact / Social</h2>
       <p>Contact me about collaboration, questions about my music, or anything else you'd like to discuss</p>
+      <ul>
       <li>Email: <a href="mailto:axmadwick@gmail.com">axmadwick@gmail.com</a></li>
       <li>Twitter: <a href="https://twitter.com/axmadwick">https://twitter.com/axmadwick</a></li>
       <li>Instagram: <a href="https://www.instagram.com/ax_madwick/">https://www.instagram.com/ax_madwick/</a></li>
+      </ul>
+      <h2>Listen to AX MADWICK</h2>
+      <div class="footer-social-links">
+        <ul>
+          <li>
+            <a href="https://open.spotify.com/artist/166YiFECwUL0G70nzeB8kY?si=yULx0GygR-6vInxiSl2EGg"><img src="{{site.url}}/images/spotify_icon.png" width="30"></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@ax_madwick"><img src="{{site.url}}/images/youtube_icon.png" width="30"></a>
+          </li>
+          <li>
+            <a href="https://music.apple.com/us/artist/ax-madwick/1713187189"><img src="{{site.url}}/images/apple_music_icon.svg" width="30"></a>
+          </li>
+        </ul>
+      </div>
+      &copy; 2024 AX MADWICK
     </div>
   </main>
 </body>
