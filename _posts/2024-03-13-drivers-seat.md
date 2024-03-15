@@ -2,43 +2,38 @@
 layout: main
 ---
 
-<div class="track__art">
-<img src="{{site.url}}/images/drivers_seat@600x600.jpg" alt="Cover art for Driver's Seat" width="300">
-</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3GQyoocRDxA?si=JPgUA532STXgBKil" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="track__links">
 	<h3>Listen to "Driver's Seat"</h3>
-	<p>Coming soon</p>
-
-	<!--
 	<ul>
 
-		<li><a href="https://tidal.com/browse/album/339162462">
+		<li><a href="https://tidal.com/browse/album/347016952">
 			<img width="120" src="{{site.url}}/images/tidal_logo.png" alt="Tidal logo">
 		</a></li>
 
 		<li>
-			<a href="https://open.spotify.com/album/1YIJknKcKdz56Aqf4sUUoz?si=4Rw3CgDXQymgN_uVNuzYDg">
+			<a href="https://open.spotify.com/album/2UOo9robkFwm7kiVieZ48I?si=_cUPZS6cTqqqbkCsRjKmkA">
 				<img src="{{site.url}}/images/spotify_logo_green.png" width="80">
 			</a>
 		</li>
 
 		<li>
-			<a href="https://soundcloud.com/ax-madwick/yo-yo-feat-matt-hatt">
+			<a href="https://soundcloud.com/ax-madwick/drivers-seat">
 				<img src="{{site.url}}/images/soundcloud_logo_2.png" width="120">
 			</a>
 		</li>
 		<li>
-			<a href="https://music.apple.com/us/album/yo-yo-feat-matt-hatt/1731065046?i=1731065047">
+			<a href="https://music.apple.com/us/album/drivers-seat-single/1731967373">
 				<img src="{{site.url}}/images/apple_music_logo.svg" width="80">
 			</a>
 		</li>
 		<li>
-			<a href="https://www.youtube.com/watch?v=-8r4OLKsAp0">
+			<a href="https://youtu.be/3GQyoocRDxA?si=gHzhhD98LZA6rA3_">
 				<img src="{{site.url}}/images/youtube_logo.svg" width="100">
 			</a>
 		</li>
 
 	</ul>
-	-->
 </div>
 
