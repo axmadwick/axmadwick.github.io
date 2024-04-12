@@ -7,37 +7,34 @@ layout: main
 </div>
 <div class="track__links">
 	<h3>Listen to "Blue Cheez"</h3>
-	<p>Coming soon</p>
-	<!--
 	<ul>
 
-		<li><a href="https://tidal.com/browse/album/347016952">
+		<li><a href="https://tidal.com/browse/track/354625748?u">
 			<img width="120" src="{{site.url}}/images/tidal_logo.png" alt="Tidal logo">
 		</a></li>
 
 		<li>
-			<a href="https://open.spotify.com/album/2UOo9robkFwm7kiVieZ48I?si=_cUPZS6cTqqqbkCsRjKmkA">
+			<a href="https://open.spotify.com/track/5eGKiqGtOcH7gculTELT7a?si=8436057ef6cb4c7c">
 				<img src="{{site.url}}/images/spotify_logo_green.png" width="80">
 			</a>
 		</li>
 
 		<li>
-			<a href="https://soundcloud.com/ax-madwick/drivers-seat">
+			<a href="https://soundcloud.com/ax-madwick/blue-cheez">
 				<img src="{{site.url}}/images/soundcloud_logo_2.png" width="120">
 			</a>
 		</li>
 		<li>
-			<a href="https://music.apple.com/us/album/drivers-seat-single/1731967373">
+			<a href="https://music.apple.com/us/album/blue-cheez/1738399650?i=1738399652">
 				<img src="{{site.url}}/images/apple_music_logo.svg" width="80">
 			</a>
 		</li>
 		<li>
-			<a href="https://youtu.be/3GQyoocRDxA?si=gHzhhD98LZA6rA3_">
+			<a href="https://music.youtube.com/watch?v=q3-WFKwQJY4&si=mqhE-vdLiFQ5wd5H">
 				<img src="{{site.url}}/images/youtube_logo.svg" width="100">
 			</a>
 		</li>
 
 	</ul>
-	-->
 </div>
 
