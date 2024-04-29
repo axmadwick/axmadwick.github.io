@@ -36,5 +36,49 @@ layout: main
 		</li>
 
 	</ul>
+	<h3>Lyrics</h3>
+
+[VERSE 1]<br>
+<br>
+Beat smelling funky like blue cheese<br>
+Smokin on the skunk eyes droopier than Snoopy's<br>
+At the movies with a cutie<br>
+Dinner had sushi, you know she a foodie<br>
+<br>
+With the ladies, I always been choosy<br>
+A little snooty, wouldn't catch me with a hoochie<br>
+I was in Japan, train from Tokyo to Zushi<br>
+On the Shinkansen, bound for Yamaguchi<br>
+<br>
+Raising two kids, family man, not Stewie<br>
+Legend of me, been collecting all the rupees<br>
+38 years, Honda Pilot, no hooptie<br>
+Listened to the beat, jot it down on some loose leaf<br>
+<br>
+[VERSE 2]<br>
+<br>
+[What's up doc?] yea my tunes a little Looney.<br>
+Extra, extra, go and ask you a newsie<br>
+Drums and guitar, plus the beat loop fruity.<br>
+Blend it all up, in your ear like a smoothie<br>
+<br>
+Chop Suey, spitting like a loogie<br>
+For the cats and dogs I deliver like Chewy<br>
+Tangier than pootie, sound extra groovy<br>
+AX on the track, then it's bound to be a doozy<br>
+<br>
+[OUTRO]<br>
+<br>
+Beat smelling funky like blue cheese<br>
+Make you shit your blue jeans<br>
+Stacking up the chips like Anamanaguchi<br>
+Animal all up in your house, John Belushi<br>
+
 </div>
 
+<h3>Credits</h3>
+<ul>
+	<li>Vocals: AX MADWICK</li>
+	<li>Production: AX MADWICK</li>
+	<li>Mix and Engineering: AX MADWICK</li>
+</ul>

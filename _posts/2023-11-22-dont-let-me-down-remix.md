@@ -32,14 +32,15 @@ layout: main
 			</a>
 		</li>
 	</ul>
-	<p>...or just search in the streaming service of your choice...</p>
 	<h3>The Story</h3>
 	<p>
 		An electronic jazz journey through different time signatures and tempos, featuring a dope verse by <a href="https://soundcloud.com/tejgreen">tej green</a>.
 	</p>
-	<h3>Credits</h3>
-	<ul>
-		<li><strong>Vocals</strong> <a href="https://soundcloud.com/tejgreen">tej green</a></li>
-		<li><strong>Art</strong> Via <a href="https://commons.wikimedia.org/wiki/File:Picture_in_a_korean_exhibition_made_from_scraps_of_fabric.jpg">Wikimedia Commons</a></li>
-	</ul>
 </div>
+
+<h3>Credits</h3>
+<ul>
+	<li><strong>Production</strong> AX MADWICK</li>
+	<li><strong>Vocals</strong> <a href="https://soundcloud.com/tejgreen">tej green</a></li>
+	<li><strong>Art</strong> Via <a href="https://commons.wikimedia.org/wiki/File:Picture_in_a_korean_exhibition_made_from_scraps_of_fabric.jpg">Wikimedia Commons</a></li>
+</ul>
