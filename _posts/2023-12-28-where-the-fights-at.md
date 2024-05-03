@@ -3,7 +3,7 @@ layout: main
 ---
 
 <div class="track__art">
-<img src="{{site.url}}/images/where_the_fights_at@600x600.jpg" alt="Cover art for Where The Fights At" width="300">
+<img src="{{site.url}}/images/where_the_fights_at_v2@600x600.jpg" alt="Cover art for Where The Fights At" width="300">
 </div>
 <div class="track__links">
 	<h3>Listen</h3>
@@ -34,15 +34,11 @@ layout: main
 		</li>
 
 	</ul>
-
-	<p>...or just search in the streaming service of your choice...</p>
-	<h3>The Story</h3>
-	<p>
-		Gritty rap track based around a vocal acapella provided by <a href="https://soundcloud.com/jakebuzzard">Jake Buzzard</a> via <a href="https://www.looperman.com/acapellas/detail/21342/where-the-fights-at-85bpm-rap-acapella">Looperman</a>. The foundation for the beat is a sliced sample of a hammered dulcimer performance.
-	</p>
-	<h3>Credits</h3>
-	<ul>
-		<li><strong>Vocals:</strong> <a href="https://soundcloud.com/jakebuzzard">Jake Buzzard</a> via <a href="https://www.looperman.com/acapellas/detail/21342/where-the-fights-at-85bpm-rap-acapella">Looperman</a>
-		</li>
-	</ul>
 </div>
+
+<h3>Credits</h3>
+<ul>
+	<li><strong>Production: </strong> AX MADWICK</li>
+	<li><strong>Vocals:</strong> <a href="https://soundcloud.com/jakebuzzard">Jake Buzzard</a> via <a href="https://www.looperman.com/acapellas/detail/21342/where-the-fights-at-85bpm-rap-acapella">Looperman</a>
+	</li>
+</ul>
