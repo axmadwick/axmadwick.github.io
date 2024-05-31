@@ -1,5 +1,6 @@
 ---
 layout: main
+title: Blue Cheez
 ---
 
 <div class="track__art">
