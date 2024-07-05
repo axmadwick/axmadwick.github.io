@@ -14,36 +14,29 @@ og_image_type: "image/jpeg"
 <div class="track__links">
 	<h2>Listen to "Fakes News Blues [Remix] (feat. The Funky Flats)"</h2>
 	<ul>
-
-		<!--
-		<li><a href="https://tidal.com/browse/album/363791139?u">
-			<img width="120" src="{{site.url}}/images/tidal_logo.png" alt="Tidal logo">
-		</a></li>
-
 		<li>
-			<a href="https://open.spotify.com/track/7xCY7wyl1DsJpSB2OIf0Vj?si=4f575788dab04d01">
+			<a href="https://open.spotify.com/track/7HAYlv9g5Dolni69Qrl3t6?si=ae3caaf801804670">
 				<img src="{{site.url}}/images/spotify_logo_green.png" width="80">
 			</a>
 		</li>
-		-->
 		<li>
 			<a href="https://soundcloud.com/ax-madwick/fake-news-remix">
 				<img src="{{site.url}}/images/soundcloud_logo_2.png" width="120">
 			</a>
 		</li>
-		<!--
 		<li>
-			<a href="https://music.apple.com/us/album/wizardry/1747178534?i=1747178535">
+			<a href="https://music.apple.com/us/album/fakes-news-blues-feat-the-funky-flats-remix-single/1751708189">
 				<img src="{{site.url}}/images/apple_music_logo.svg" width="80">
 			</a>
 		</li>
 		<li>
-			<a href="https://www.youtube.com/watch?v=5WcEd7PlDCY">
+			<a href="https://youtu.be/1zB5m4kADUY?si=p19ZaltlHqwODQ_d">
 				<img src="{{site.url}}/images/youtube_logo.svg" width="100">
 			</a>
 		</li>
-		-->
-
+		<li><a href="https://tidal.com/browse/track/368847206?u">
+			<img width="120" src="{{site.url}}/images/tidal_logo.png" alt="Tidal logo">
+		</a></li>
 	</ul>
 	<h2>Lyrics</h2>
 
