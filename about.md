@@ -6,7 +6,7 @@ permalink: /about/
 
 # About
 
-<img src="{{site.url}}/images/me@300x300.jpg" alt="A photo of me">
+<img src="{{site.url}}/images/ax@300x300.jpg" alt="A photo of me">
 
 AX MADWICK has been making music for over 25 years. He got started in middle school, playing guitar in a rock band named Wired in his friend's basement, performing both originals and covers. Through band practice he became enthralled with the drums and wound up forming another band with the same members called Untitled where he and the drummer switched roles.
 
