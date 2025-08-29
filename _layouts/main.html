@@ -48,6 +48,9 @@ layout: main
     main a {
       color: white;
     }
+    a.no-decorate {
+      text-decoration: none;
+    }
     .wrapper {
       width: 90%;
       max-width: 800px;
@@ -106,14 +109,26 @@ layout: main
       font-size: 0.8rem;
       color: rgb(19, 0, 25);
     }
-    .footer-social-links ul {
+    .footer-social-links ul, ul.footer-contact-links {
       margin: 0;
       padding: 0;
     }
-    .footer-social-links li {
+    .footer-social-links li, .footer-contact-links li {
       list-style: none;
       margin: 0;
       display: inline-block;
+      padding-right: 10px;
+    }
+    .footer-contact-links li {
+      display: table;
+    }
+    .footer-contact-links li span {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .footer-contact-links li img {
+      width: 30px;
+      height: auto;
       padding-right: 10px;
     }
 
@@ -127,6 +142,7 @@ layout: main
     .work-grid img {
       width: 90%;
       max-width: 400px;
+      height: auto;
     }
 
     @media (min-width: 700px) {
@@ -159,10 +175,24 @@ layout: main
       </nav>
       {{ content }}
       <h2>Let's Connect</h2>
-      <p>Contact me about collaboration through email or follow my music on Instagram</p>
-      <ul>
-      <li>Email: <a href="mailto:axmadwick@gmail.com">axmadwick@gmail.com</a></li>
-      <li>Instagram: <a href="https://www.instagram.com/ax_madwick/">https://www.instagram.com/ax_madwick/</a></li>
+      <p>Contact me about collaboration or follow my music.</p>
+      <ul class="footer-contact-links">
+        <li>
+          <a href="mailto:axmadwick@gmail.com" class="no-decorate">
+            <img src="{{site.url}}/images/email_icon.png">
+          </a>
+          <a href="mailto:axmadwick@gmail.com" class="no-decorate">
+              <span>axmadwick@gmail.com</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/ax_madwick/" class="no-decorate">
+            <img src="{{site.url}}/images/ig.png">
+          </a>
+          <a href="https://www.instagram.com/ax_madwick/">
+            <span>/ax_madwick</span>
+          </a>
+        </li>
       </ul>
       <h2>Listen to AX MADWICK</h2>
       <div class="footer-social-links">
