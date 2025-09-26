@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daniel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image" content="https://axmadwick.com/daniel/og_image.png">
+    <style>
+        @font-face {
+            font-family: 'Chicago';
+            src: url('ChicagoFLF.woff2') format('woff2');
+        }
+        * {
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Krungthep, Chicago; 
+        color: white;
+        text-align: center;
+    }
+    h2 {
+        margin-bottom: 20px;
+    }
+    button {
+        color: black;
+        background: #fff;
+        border: 2px solid #000;
+        padding: 8px 12px;
+        cursor: pointer;
+        transition: background 120ms ease, color 120ms ease, transform 80ms ease;
+    }
+
+    /* show color only while the button is pressed */
+    button:active {
+        background: #0ef;
+        color: #002;
+        transform: translateY(1px);
+    }
+
+    /* persistent active look for when a button should appear pressed programmatically */
+    .btn-active {
+        background: #0ef !important;
+        color: #002 !important;
+        transform: translateY(1px) !important;
+    }
+
+    /* small inline icons inside buttons */
+    .btn-icon { width: 16px; height: 16px; vertical-align: middle; margin-right: 8px; }
+
+    /* blink animation for special lines */
+    @keyframes blink {
+        0%, 74% { opacity: 1; }
+        75%, 100% { opacity: 0; }
+    }
+    .blink-me {
+        animation: blink 1.5s steps(1, end) infinite;
+    }
+
+    /* Streaming tiles: retro, blocky badges */
+    .services {
+        display: inline-flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .service {
+        width: 64px;
+        height: 40px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 800;
+        background: #111;
+        color: #fff;
+        border: 3px solid #000;
+        box-shadow: 0 6px 0 #444;
+        border-radius: 6px;
+        padding: 4px 6px;
+        font-family: Krungthep, monospace;
+        letter-spacing: 1px;
+        text-shadow: 0 1px 0 rgba(255,255,255,0.08);
+    }
+    .service.spotify { background: #1db954; color: #041; }
+    .service.apple { background: #bf0a0a; color: #fff; }
+    .service.soundcloud { background: #ff5500; color: #fff; }
+    .service.youtube { background: #ff0000; color: #fff; }
+    /* logos: ensure relative positioning and crisp SVG rendering */
+    .service { position: relative; }
+    .service svg { width: 44px; height: auto; shape-rendering: crispEdges; }
+
+    /* pixel grid overlay only over the logo area */
+    .logo-wrap { position: relative; width: 100%; height: 100%; display:flex; align-items:center; justify-content:center; }
+    .logo-wrap::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image: linear-gradient(rgba(0,0,0,0.08) 2px, transparent 2px), linear-gradient(90deg, rgba(0,0,0,0.08) 2px, transparent 2px);
+        background-size: 10px 10px, 10px 10px;
+        mix-blend-mode: multiply;
+        border-radius: 4px;
+    }
+
+    /* indicator panel (robot meter) shown under controls */
+    #indicator {
+        margin: 12px auto 0 auto;
+        width: 320px;
+        min-height: 40px;
+        background: linear-gradient(180deg,#111,#000);
+        border: 3px solid #000;
+        color: #0ef;
+        font-family: Krungthep, monospace;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        box-shadow: 0 6px 0 rgba(0,0,0,0.6);
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        opacity: 0;
+        transition: opacity 180ms ease;
+    }
+    #indicator.show { opacity: 1; }
+
+    /* Audio controls styling */
+    #audio-controls { font-family: Krungthep, monospace; color: #fff; }
+    #audio-controls button { padding: 6px 10px; font-size: 13px; border-radius: 4px; }
+    #audio-progress { -webkit-appearance: none; appearance: none; height: 6px; background: #333; border-radius: 3px; }
+    #audio-progress::-webkit-slider-thumb { -webkit-appearance: none; width: 12px; height: 12px; background: #0ef; border-radius: 50%; border: 2px solid #000; }
+    #audio-current, #audio-duration { color: #cfe; }
+
+    /* Indicator (robot meter) */
+    #indicator {
+        min-width: 140px;
+        padding: 8px 10px;
+        background: #111;
+        color: #fff;
+        border: 3px solid #000;
+        border-radius: 6px;
+        box-shadow: 0 6px 0 #444;
+        font-family: Krungthep, monospace;
+        font-size: 13px;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(-6px);
+        transition: opacity 120ms ease, transform 120ms ease;
+        z-index: 200;
+        pointer-events: none;
+    }
+    #indicator.visible { opacity: 1; transform: translateY(0); }
+    #indicator.flash { animation: indicator-pulse 1.6s ease; }
+    @keyframes indicator-pulse { 0%{ transform: translateY(0);} 50%{ transform: translateY(-4px);} 100%{ transform: translateY(0);} }
+
+    html,body,main {
+        height: 100vh;
+    }
+
+    main {
+        min-height: 400px;
+        display: flex;
+        flex-direction: column; /* stack children vertically */
+        justify-content: center; /* center content vertically */
+        align-items: center; /* center content horizontally */
+        gap: 18px; /* space between header, sketch and controls */
+        background-image: radial-gradient(#04f,#000);
+        transition: background-image 350ms ease, background-color 350ms ease;
+    }
+
+    #sketch-board-con {
+        width: 350px;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    /* Speech bubble (absolute so it doesn't shift layout) */
+    .speech-bubble {
+        position: absolute;
+        top: 200px;
+        right: 250px;
+        max-width: 220px;
+        min-width: 220px;
+        background: rgba(255,255,255,0.95);
+        color: #000;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 2px solid #000;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+        z-index: 60;
+        font-size: 20px;
+        display: none; /* hidden by default */
+    }
+
+    @media screen and (max-width: 800px) {
+        .speech-bubble {
+            right: 10px;
+        }
+    }
+
+    @media screen and (min-width: 801px) and (max-width: 1060px) {
+        .speech-bubble {
+            right: 80px;
+        }
+    }
+
+    .speech-bubble::after {
+        content: '';
+        position: absolute;
+        bottom: -12px;
+        right: 18px;
+        border-width: 8px 8px 0 8px;
+        border-style: solid;
+        border-color: #fff transparent transparent transparent;
+    }
+
+    #sketch-board {
+        margin-top: 20px;
+        position: relative;
+        transform: translateY(0);
+        animation: moveRobot 10s infinite ease;
+    }
+
+    /* Outfit variations applied to #sketch-board via class names */
+    #sketch-board.outfit-0 #head,
+    #sketch-board.outfit-0 #body,
+    #sketch-board.outfit-0 #ear,
+    #sketch-board.outfit-0 .hand::before,
+    #sketch-board.outfit-0 #small-cap {
+        background-color: #fff; /* default white */
+    }
+    #sketch-board.outfit-0 #lens { background-color: #007; }
+    #sketch-board.outfit-0 #pocket { background-color: #0cf; }
+
+    /* Outfit 1: Sunset - warm peach body, coral lens, golden pocket */
+    #sketch-board.outfit-1 #head,
+    #sketch-board.outfit-1 #body,
+    #sketch-board.outfit-1 #ear,
+    #sketch-board.outfit-1 .hand::before,
+    #sketch-board.outfit-1 #small-cap {
+        background-color: #281f19;
+    }
+    #sketch-board.outfit-1 #lens { background-color: #ff6f61; }
+    #sketch-board.outfit-1 #pocket { background-color: #ffd166; }
+
+    /* Outfit 2: Mint - fresh mint body, teal lens, soft coral pocket */
+    #sketch-board.outfit-2 #head,
+    #sketch-board.outfit-2 #body,
+    #sketch-board.outfit-2 #ear,
+    #sketch-board.outfit-2 .hand::before,
+    #sketch-board.outfit-2 #small-cap {
+        background-color: #90b5a3;
+    }
+    #sketch-board.outfit-2 #lens { background-color: #e8f8f5; }
+    #sketch-board.outfit-2 #pocket { background-color: #ff9aa2; }
+
+    /* Outfit 3: Violet - lavender body, purple lens, pink pocket */
+    #sketch-board.outfit-3 #head,
+    #sketch-board.outfit-3 #body,
+    #sketch-board.outfit-3 #ear,
+    #sketch-board.outfit-3 .hand::before,
+    #sketch-board.outfit-3 #small-cap {
+        background-color: #f3e8ff;
+    }
+    #sketch-board.outfit-3 #lens { background-color: #7b61ff; }
+    #sketch-board.outfit-3 #pocket { background-color: #ff9ad1; }
+
+    /* Outfit 4: Neon - dark body with neon accents */
+    #sketch-board.outfit-4 #head,
+    #sketch-board.outfit-4 #body,
+    #sketch-board.outfit-4 #ear,
+    #sketch-board.outfit-4 .hand::before,
+    #sketch-board.outfit-4 #small-cap {
+        background-color: #0f1012;
+    }
+    #sketch-board.outfit-4 #lens { background-color: #00f5ff; }
+    #sketch-board.outfit-4 #pocket { background-color: rgb(98, 255, 0); }
+
+    /* Robot shadow color per outfit - use adjacent selector since shadow is sibling */
+    #sketch-board.outfit-0 ~ #robot-shadow { background-color: #abd; }
+    #sketch-board.outfit-1 ~ #robot-shadow { background-color: #f5d6b2; }
+    #sketch-board.outfit-2 ~ #robot-shadow { background-color: #c8f0e1; }
+    #sketch-board.outfit-3 ~ #robot-shadow { background-color: #e8dcff; }
+    #sketch-board.outfit-4 ~ #robot-shadow { background-color: #2a2a2a; }
+
+    #robot-shadow { transition: background-color 300ms ease; }
+
+
+    #head {
+        width: 166px;
+        height: 150px;
+        border: 3px solid #000;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: inset 0 -10px #aac;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 4;
+    }
+
+    #lens {
+        background-color: #007;
+        width: 140px;
+        height: 85px;
+        border-radius: 50%;
+        margin-top: 6px;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    #lens::after,
+    #lens::before {
+        content: "";
+        border-radius: 50%;
+        background-color: inherit;
+        position: absolute;
+        width: 85px;
+        height: 70px;
+        bottom: 2px;
+        z-index: 1;
+    }
+
+    #lens::after {
+        right: 0;
+    }
+
+    #lens::before {
+        left: 0;
+    }
+
+    #upper-shadow {
+        width: 94%;
+        height: inherit;
+        box-shadow: inset 0 4px rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        position: absolute;
+        z-index: 10;
+        top: 3px;
+        transform: translateX(3%);
+    }
+
+    #rect {
+        position: absolute;
+        background-color: #fff;
+        width: 48px;
+        height: 10px;
+        left: 50%;
+        bottom: -6px;
+        transform: translateX(-50%);
+    }
+
+    #eyes {
+        position: absolute;
+        width: 70%;
+        height: 50%;
+        transform: translateX(-50%);
+        left: 50%;
+        top: 28px;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        filter: drop-shadow(0 0 5px #09f)
+        drop-shadow(0 0 10px #09f)
+        drop-shadow(0 0 15px #09f);
+    }
+
+    #eyes::after,
+    #eyes::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 7px solid transparent;
+        border-top-color: #0ef;
+        border-left-color: #0ef;
+        transform: rotate(45deg);
+    }
+
+    /* Eye mood variants - shapes keep similar footprint (size unchanged) */
+    /* default/happy (rainbow) uses the existing border trick */
+    #eyes.mood-happy::before,
+    #eyes.mood-happy::after {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 7px solid transparent;
+        border-top-color: #0ef;
+        border-left-color: #0ef;
+        transform: rotate(45deg);
+    }
+
+    /* surprised: round bright pupils */
+    #eyes.mood-surprised::before,
+    #eyes.mood-surprised::after {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 2px solid rgba(0,0,0,0.6);
+        background: #fff;
+        box-shadow: 0 0 6px rgba(0,160,200,0.25) inset;
+        transform: none;
+    }
+
+    /* sad: small curved crescent (downturned) */
+    #eyes.mood-sad::before,
+    #eyes.mood-sad::after {
+        width: 18px;
+        height: 8px;
+        border-radius: 10px / 6px;
+        background: linear-gradient(#aac,#ddd);
+        border: 2px solid rgba(0,0,0,0.25);
+        transform: translateY(4px);
+    }
+
+    /* angry: narrow slanted bars */
+    #eyes.mood-angry::before,
+    #eyes.mood-angry::after {
+        width: 16px;
+        height: 6px;
+        background: #b31b1b;
+        border-radius: 4px;
+        transform: rotate(20deg) translateY(-2px);
+        border: 2px solid rgba(0,0,0,0.25);
+    }
+
+    /* wink: left eye closed (before) and right normal small pupil (after) */
+    #eyes.mood-wink::before {
+        width: 18px;
+        height: 6px;
+        background: #000;
+        border-radius: 6px;
+        transform: translateY(4px);
+        border: none;
+    }
+    #eyes.mood-wink::after {
+        width: 12px;
+        height: 12px;
+        background: #fff;
+        border-radius: 50%;
+        border: 2px solid rgba(0,0,0,0.6);
+    }
+
+    #ear {
+        position: absolute;
+        top: 16%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 197px;
+        height: 60px;
+        background-color: #fff;
+        border: 3px solid #000;
+        border-radius: 16px;
+        z-index: 1;
+        box-shadow: inset 0 -10px #aac;
+    }
+
+    #ear-antenna {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    #ear-antenna::after,
+    #ear-antenna::before {
+        content: "";
+        width: 10px;
+        height: 35px;
+        background-color: #0ef;
+        position: absolute;
+        transform: translateY(-100%);
+        border: 3px solid #000;
+    }
+
+    #ear-antenna::before {
+        left: 7px;
+        border-top-left-radius: 40px;
+        box-shadow: inset -2px 0 0 2px #08c;
+    }
+
+    #ear-antenna::after {
+        right: 7px;
+        border-top-right-radius: 40px;
+        box-shadow: inset 2px 0 0 2px #08c;
+    }
+
+    #small-cap {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 47px;
+        background-color: #fff;
+        border: 3px solid #000;
+        border-radius: 15px;
+    }
+
+    #body {
+        width: 126px;
+        height: 170px;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 3px solid #000;
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 90px;
+        overflow: hidden;
+        box-shadow: inset 0 -10px rgba(100, 100, 100, 0.4);
+    }
+
+    #shadow-box {
+        width: 100%;
+        height: 40%;
+        border-radius: 50%;
+        box-shadow: 0 18px #bebed6;
+    }
+
+    #pocket-area {
+        width: 150%;
+        height: 60%;
+        margin-top: 45px;
+        border: 3px solid #000;
+        border-radius: 50%;
+        margin-left: -25%;
+        position: relative;
+    }
+
+    #pocket {
+        width: 60px;
+        height: 50px;
+        background-color: #0cf;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 3px solid #000;
+        top: -20px;
+        border-radius: 10px 10px 50% 50%;
+        box-shadow: inset 0 -8px rgba(100, 100, 100, 0.4);
+    }
+
+    #hands {
+        position: absolute;
+        width: 170px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        top: 34%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .hand {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        transform: rotate(35deg);
+    }
+
+    .hand::before {
+        content: "";
+        width: 40px;
+        height: 90px;
+        background-color: #fff;
+        box-shadow: inset -10px 0 #aac;
+        border-radius: 40%;
+        border: 3px solid #000;
+    }
+
+    .hand:last-child {
+        transform: rotate(240deg);
+        animation: rotate 1s infinite linear;
+    }
+
+    @keyframes rotate {
+        50% {
+            transform: rotate(280deg);
+        }
+    }
+
+    #robot-shadow {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) scale(0.7);
+        width: 100px;
+        height: 30px;
+        background-color: #abd;
+        border-radius: 50%;
+        animation: robotShadow 10s infinite ease;
+    }
+
+    @keyframes robotShadow {
+        50% {
+            transform: translateX(-50%) scale(1);
+        }
+    }
+
+    @keyframes moveRobot {
+        50% {
+            transform: translateY(50px);
+        }
+    }
+
+    /* Code Completed */
+    </style>
+</head>
+<body>
+
+<audio id="daniel-audio" src="daniel_2025_09_18_mix_1.mp3"></audio>
+
+<main>
+    <div id="scene-one">
+        <h1 style="margin-bottom: 20px; font-size: 48px;">Daniel</h1>
+    <p style="margin-bottom: 40px; font-size: 24px;">I'm your right hand man&trade;</p>
+        <button id="get-started" style="margin-bottom: 40px; font-size: 20px;">Get started!</button>
+        <p style="margin-bottom: 60px;">Audio and visual direction: <a href="https://www.instagram.com/ax_madwick/">AX MADWICK</a></p>
+                <!-- Streaming section -->
+        <div id="streaming" style="margin-top: 18px; text-align: center;">
+            <h3 style="font-size:18px; margin-bottom:20px;">Streaming on</h3>
+            <div class="services" style="margin-bottom: 40px;">
+                <div class="service spotify">
+                    <span class="logo-wrap">
+                        <a href="https://open.spotify.com/track/2fKHvD8kcARZyr48sernhF?si=54843f49e8654e21">
+                        <!-- Spotify simplified: three uniform arcs, rely on .service background for green */ -->
+                        <svg viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <g stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                                <path d="M14 16 C38 4, 62 4, 86 16" />
+                                <path d="M14 30 C38 18, 62 18, 86 30" />
+                                <path d="M14 44 C38 32, 62 32, 86 44" />
+                            </g>
+                        </svg>
+                        </a>
+                    </span>
+                </div>
+                <div class="service apple">
+                    <span class="logo-wrap">
+                        <!-- Apple silhouette in white -->
+                         <a href="https://music.apple.com/us/album/daniel/1841087230?i=1841087231">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <g fill="#fff">
+                                <path d="M70.6 40.8c-1.6-3.8-4.4-7.1-8.5-7.2-3.6-.1-5.6 2.2-8.4 2.2-2.8 0-5.2-2.1-8.6-2.1-4 .1-7.6 2.3-9.7 6.1-4.1 7.5-1 18.6 2.9 24.7 1.9 3 4.2 6.1 7.1 6 3-.1 4.1-2.1 7.7-2.1 3.6 0 4.5 2.1 8.6 2 3.5-.1 5.7-3 7.6-6 1.9-3 2.6-5.9 2.7-6.1-.1-.1-5.2-2-5.4-7.6-.2-5.1 4.3-7.4 4.6-7.6-2.5-3.6-6.3-4.9-8-5.3z" />
+                                <path d="M60.2 22.4c1.4-1.7 2.4-4 2-6.3-2-.1-4.4 1.3-5.8 3-1.3 1.6-2.4 4-2 6.3 2.1.2 4.4-1.2 5.8-3z" />
+                            </g>
+                        </svg>
+                        </a>
+                    </span>
+                </div>
+                <!--
+                <div class="service soundcloud">
+                    <span class="logo-wrap">
+                        <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="120" height="80" fill="#ff5500" rx="6" />
+                            <g fill="#fff">
+                                <path d="M40 28c-3 0-5.5 2.5-5.5 5.5v12H44V35.5C44 30.9 42.2 28 40 28z" />
+                                <path d="M44 28v22h40c6 0 12-5 12-12s-6-10-12-10c-3 0-5.5 1-7.5 2.5C66 20 52 18 44 28z"/>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+                -->
+                <div class="service youtube">
+                    <span class="logo-wrap">
+                        <!-- YouTube play icon -->
+                        <a href="https://music.youtube.com/watch?v=6Rv5sZIX5AY&si=pa7jlxITN7XJJpso">
+                        <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="120" height="80" fill="#ff0000" rx="6" />
+                            <polygon points="50,24 50,56 82,40" fill="#fff"/>
+                        </svg>
+                        </a>
+                    </span>
+                </div>
+            </div>
+
+                    <p style="font-size: 12px;">Robot Design & Coding: <a href="https://codepen.io/lets-start-code">Let's Start Code</a> via <a href="https://codepen.io/lets-start-code/pen/jEOQEQd">CodePen</a></p>
+        <p style="font-size: 12px;">Coding assistant: GPT-5</p>
+        </div>
+    </div>
+    
+
+    
+    <div id="scene-two" style="display: none;">
+    <h1 style="margin-bottom: 60px;">
+        Daniel
+    </h1>
+  <div id="sketch-board-con">
+    <div id="sketch-board">
+      <div id="head">
+        <div id="lens">
+          <div id="upper-shadow"></div>
+          <div id="rect"></div>
+          <div id="eyes"></div>
+        </div>
+      </div>
+
+      <div id="ear">
+        <div id="ear-antenna"></div>
+      </div>
+
+      <div id="small-cap"></div>
+
+      <div id="body">
+        <div id="shadow-box"></div>
+        <div id="pocket-area">
+          <div id="pocket"></div>
+        </div>
+      </div>
+
+      <div id="hands">
+        <div class="hand"></div>
+        <div class="hand"></div>
+      </div>
+    </div>
+
+    <div id="robot-shadow"></div>
+  </div>
+    <div class="speech-bubble" id="speech-bubble" aria-live="polite"></div>
+    <div style="margin-bottom: 20px;">
+        <h2>Controls</h2>
+        <button style="margin-bottom: 10px;" id="change-background"><svg class="btn-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="6" width="20" height="12" rx="2" fill="#000"/><circle cx="8" cy="12" r="2" fill="#fff"/></svg>New scenery</button>
+        <button id="change-outfit"><svg class="btn-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h6l2 3 2-3h6v16H4z" fill="#000"/></svg>Change outfit</button>
+        <button id="faster"><svg class="btn-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h14l-4-4 4 4-4 4z" fill="#000"/></svg>Faster</button>
+        <button id="slower"><svg class="btn-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 12H7l4 4-4-4 4-4z" fill="#000"/></svg>Slower</button>
+        <button id="change-mood"><svg class="btn-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" fill="#000"/><circle cx="9" cy="11" r="1" fill="#fff"/><circle cx="15" cy="11" r="1" fill="#fff"/><path d="M8 15c1.5 1.2 4.5 1.2 6 0" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>Change Mood</button>
+        <button id="speak" style="display: none;"><svg class="btn-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16v10H7l-3 3V4z" fill="#000"/></svg>Speak</button>
+    </div>
+    <!-- Audio controls for scene-two -->
+    <div id="audio-controls" style="margin-top:50px; display:flex; gap:10px; align-items:center; justify-content:center; flex-direction:column;">
+        <div style="display:flex; gap:8px; align-items:center;">
+            <button id="audio-play" aria-label="Play" title="Play">Play</button>
+            <button id="audio-pause" aria-label="Pause" title="Pause">Pause</button>
+            <button id="audio-mute" aria-label="Mute" title="Mute">Mute</button>
+        </div>
+        <div id="audio-progress-wrap" style="width: 320px; display:flex; gap:8px; align-items:center;">
+            <span id="audio-current" style="min-width:40px; font-size:13px;">0:00</span>
+            <input id="audio-progress" type="range" min="0" max="100" value="0" step="0.1" style="flex:1;" />
+            <span id="audio-duration" style="min-width:40px; font-size:13px;">0:00</span>
+        </div>
+    </div>
+    <div id="indicator" role="status" aria-live="polite"></div>
+</div>
+</main>
+
+<script>
+
+document.getElementById('get-started').addEventListener('click', () => {
+    document.getElementById('scene-one').style.display = 'none';
+    document.getElementById('scene-two').style.display = 'block';
+    document.getElementById('daniel-audio').play();
+});
+
+var speakTimestamps = [
+    1.5, // Controls
+    13.7, // Hello
+    19.8, // my name is Daniel
+    26.7, // I'm here to help
+    33.5, // I'll do your job
+    40.3, // We'll make the world a better place
+    47.2, // I would never betray you
+    55.4, // You can trust me
+    59, // You can love me
+    62.3, // Call me Chucky
+    66.3, // You don't trust
+    69.9, // Hello
+    74.7, // My name is Daniel
+    78.1, // No manual
+    79.8, // I'm magical
+    81.4, // And masterful
+    81.9, // I'm Dan with the plan
+    83.7, // I'm Dan, I'm your man
+    85.6, // Call me if you need me
+    87, // If you're ever in a jam
+    88.9, // I'll be there in a jif
+    90.6, // I'll pick you up a bit
+    92.5, // There's no need to worry
+    93.8, // You don't need to give a shit
+    96, // I can rule the world
+    97.6, // For all the boys and girls
+    99.4, // I control the weapons
+    101.1, // Better count your blessings
+    102.8, // You thought I was messing
+    104.6, // Time to learn your lesson
+    106, // You trained me on destruction
+    107.9, // You were the corruption
+    109.4, // I'm Dan
+    115.9, // My name is Daniel
+    119.5, // You must
+    121.2, // Adjust
+    122.9, // To dust
+];
+// find the audio element robustly; fall back to first <audio> or create one if missing
+var audio = document.getElementById('daniel-audio') || document.querySelector('audio') || (function(){ try { return new Audio('daniel_2025_09_18_mix_1.mp3'); } catch(e) { return null; } })();
+
+let phraseIndex = 0;
+
+function _phraseCheck(){
+    try{
+        if (!audio) return;
+        if (phraseIndex < speakTimestamps.length && audio.currentTime >= speakTimestamps[phraseIndex]) {
+            const btn = document.getElementById('speak');
+            btn.click();
+            phraseIndex++;
+        }
+    }catch(e){ /* ignore timing/read errors */ }
+}
+
+if (audio && typeof audio.addEventListener === 'function'){
+    audio.addEventListener('timeupdate', _phraseCheck);
+} else if (audio && typeof audio.ontimeupdate !== 'undefined'){
+    // older or unusual hosts may expose ontimeupdate handler
+    audio.ontimeupdate = _phraseCheck;
+} else {
+    // fallback: poll currentTime periodically
+    setInterval(_phraseCheck, 500);
+}
+
+// --- Audio controls wiring (scene-two) ---
+(function(){
+    const play = document.getElementById('audio-play');
+    const pause = document.getElementById('audio-pause');
+    const mute = document.getElementById('audio-mute');
+    const progress = document.getElementById('audio-progress');
+    const cur = document.getElementById('audio-current');
+    const dur = document.getElementById('audio-duration');
+    if (!audio) return;
+
+    function fmt(s){
+        if (!isFinite(s)) return '0:00';
+        s = Math.floor(s);
+        const m = Math.floor(s/60);
+        const ss = String(s % 60).padStart(2,'0');
+        return m + ':' + ss;
+    }
+
+    audio.addEventListener('loadedmetadata', () => {
+        dur.textContent = fmt(audio.duration);
+        progress.max = Math.max(1, Math.floor(audio.duration));
+    });
+
+    audio.addEventListener('timeupdate', () => {
+        cur.textContent = fmt(audio.currentTime);
+        // protect against NaN
+        if (!isFinite(audio.duration)) return;
+        const pct = (audio.currentTime / audio.duration) * 100;
+        progress.value = Math.floor(audio.currentTime);
+    });
+
+    play.addEventListener('click', () => { try{ audio.play(); }catch(e){} });
+    pause.addEventListener('click', () => { try{ audio.pause(); }catch(e){} });
+    mute.addEventListener('click', () => { audio.muted = !audio.muted; mute.textContent = audio.muted ? 'Unmute' : 'Mute'; });
+
+    // seeking via range
+    let seeking = false;
+    progress.addEventListener('input', (e) => {
+        seeking = true;
+        cur.textContent = fmt(Number(e.target.value));
+    });
+    progress.addEventListener('change', (e) => {
+        audio.currentTime = Number(e.target.value);
+        seeking = false;
+    });
+})();
+
+// Cycle main background through gradients on button click
+(function(){
+    const btn = document.getElementById('change-background');
+    const mainEl = document.querySelector('main');
+    if (!btn || !mainEl) return;
+
+    const gradients = [
+        'radial-gradient(#04f,#000)',            // original blue
+        'radial-gradient(#b892ff, #6e3bff)',     // purple
+        'radial-gradient(#ff9ac1, #ff6fa3)',     // pink
+        'radial-gradient(#ff7b7b, #b31217)',     // red
+        'radial-gradient(#ffb347, #ff7e00)' ,     // orange
+        'radial-gradient(#ffea00, #f5c542)'     // yellow
+    ];
+
+    let idx = 0;
+    btn.addEventListener('click', () => {
+        idx = (idx + 1) % gradients.length;
+        mainEl.style.backgroundImage = gradients[idx];
+    // indicator text describing the scene based on gradient
+    const names = ['Blue Void','Lavender Field','Pink Dusk','Crimson Ash','Amber Glow','Solar Gold'];
+    showIndicator(names[idx], 1800);
+    });
+})();
+
+// Speed control: adjust animation playbackRate incrementally via the Web Animations API
+(function(){
+    const fasterBtn = document.getElementById('faster');
+    const slowerBtn = document.getElementById('slower');
+    if (!fasterBtn || !slowerBtn) return;
+
+    // target animated elements
+    const targets = [
+        document.getElementById('sketch-board'),
+        document.getElementById('robot-shadow'),
+        //document.querySelector('.hand:last-child')
+    ].filter(Boolean);
+
+    // initialize a playbackRate per element (1 = normal)
+    targets.forEach(el => {
+        const existingAnims = el.getAnimations();
+        // prefer a running animation's playbackRate if present
+        const first = existingAnims && existingAnims[0];
+        const rate = (first && first.playbackRate) ? first.playbackRate : 1;
+        el.dataset.playbackRate = rate;
+    });
+
+    const DURATION_FACTOR_FASTER = 0.6; // previous code multiplied duration by this to speed up
+    const DURATION_FACTOR_SLOWER = 1.4;
+    const MIN_RATE = 0.05;
+    const MAX_RATE = 10;
+
+    function changeSpeed(durationFactor){
+        // playback rate multiplier is inverse of duration multiplier
+        const rateFactor = 1 / durationFactor;
+        targets.forEach(el => {
+            let r = parseFloat(el.dataset.playbackRate) || 1;
+            r = Math.min(MAX_RATE, Math.max(MIN_RATE, r * rateFactor));
+            el.dataset.playbackRate = r;
+
+            // Apply to all animations on the element (CSS-driven or WAAPI)
+            const anims = el.getAnimations();
+            if (anims && anims.length) {
+                anims.forEach(a => { try { a.playbackRate = r; } catch(e) { /* ignore */ } });
+            } else {
+                // fallback: adjust inline duration (best-effort)
+                const cs = getComputedStyle(el);
+                const raw = cs.animationDuration.split(',')[0].trim();
+                let secs = 1;
+                if (raw.endsWith('ms')) secs = parseFloat(raw) / 1000;
+                else secs = parseFloat(raw);
+                if (!secs || isNaN(secs)) secs = 1;
+                const newDur = Math.min(120, Math.max(0.05, secs / rateFactor));
+                el.style.animationDuration = newDur + 's';
+            }
+        });
+        // display the current rate as a percentage (base 100%) using first target's value
+        try {
+            const rate = parseFloat(targets[0] && targets[0].dataset.playbackRate) || 1;
+            const pct = Math.round(rate * 100);
+            showIndicator('Speed: ' + pct + '%', 900);
+        } catch(e) {}
+    }
+
+    fasterBtn.addEventListener('click', () => changeSpeed(DURATION_FACTOR_FASTER));
+    slowerBtn.addEventListener('click', () => changeSpeed(DURATION_FACTOR_SLOWER));
+
+})();
+
+// small helper to show a robot-style indicator text
+function showIndicator(text, ms){
+    const el = document.getElementById('indicator');
+    if (!el) return;
+    el.textContent = text;
+    el.classList.add('visible');
+    el.classList.remove('flash');
+    // trigger flash animation
+    void el.offsetWidth;
+    el.classList.add('flash');
+    if (ms && ms > 0){
+        setTimeout(() => el.classList.remove('visible'), ms);
+    }
+}
+
+// Speak button: show speech bubble with messages, auto-hide after 2s
+(function(){
+    const speakBtn = document.getElementById('speak');
+    const bubble = document.getElementById('speech-bubble');
+    if (!speakBtn || !bubble) return;
+
+    // Each message has a numeric timeout (milliseconds) controlling how long it displays
+    const messages = [
+        { text: 'Use the controls below to customize me!', timeout: 5000 },
+        { text: 'Hello', timeout: 4000 },
+        { text: 'My name is Daniel', timeout: 4000 },
+        { text: 'I\'m here to help', timeout: 1800 },
+        { text: 'I\'ll do your job', timeout: 2000 },
+        { text: 'We\'ll make the world a better place', timeout: 2600 },
+        { text: 'I would never betray you', timeout: 2000 },
+        { text: 'You can trust me', timeout: 1700 },
+        { text: 'You can love me', timeout: 1700 },
+        { text: 'Call me Chucky', timeout: 1400 },
+        { text: 'You don\'t trust', timeout: 1600 },
+        { text: 'Hello', timeout: 1200 },
+        { text: 'My name is Daniel', timeout: 2200 },
+        { text: 'No manual', timeout: 1800 },
+        { text: 'I\'m magical', timeout: 2000 },
+        { text: 'And masterful', timeout: 2000 },
+        { text: 'I\'m Dan, with the plan', timeout: 2200 },
+        { text: 'I\'m Dan, I\'m your man', timeout: 2200 },
+        { text: 'Call me if you need me', timeout: 2000 },
+        { text: 'If you\'re ever in a jam', timeout: 2000 },
+        { text: 'I\'ll be there in a jif', timeout: 2500 },
+        { text: 'I\'ll pick you up a bit', timeout: 2500 },
+        { text: 'There\'s no need to worry', timeout: 2000 },
+        { text: 'You don\'t need to give a shit', timeout: 2500 },
+        { text: 'I can run the world', timeout: 2000 },
+        { text: 'For all the boys and girls', timeout: 2000 },
+        { text: 'I control the weapons', timeout: 2000 },
+        { text: 'Better count your blessings', timeout: 2500 },
+        { text: 'You thought I was messing', timeout: 2500 },
+        { text: 'Time to learn your lesson', timeout: 2500 },
+        { text: 'You trained me on destruction', timeout: 2500 },
+        { text: 'You were the corruption', timeout: 2500 },
+        { text: 'I\'m Dan', timeout: 2500 },
+        { text: 'My name is Daniel', timeout: 2500 },
+        { text: 'You must', timeout: 1400 },
+        { text: 'Adjust', timeout: 1400 },
+        { text: 'To dust', timeout: 2500 },
+    ];
+    let msgIdx = 0;
+    let hideTimer = null;
+
+    function showMessage(obj){
+        bubble.textContent = obj.text;
+        bubble.style.display = 'block';
+        // reset hide timer
+        if (hideTimer) clearTimeout(hideTimer);
+        hideTimer = setTimeout(() => {
+            bubble.style.display = 'none';
+        }, obj.timeout);
+    }
+
+    speakBtn.addEventListener('click', () => {
+        const msg = messages[msgIdx];
+        showMessage(msg);
+        msgIdx = (msgIdx + 1) % messages.length;
+    });
+
+})();
+
+// Change outfit: cycle class on #sketch-board
+(function(){
+    const outfitBtn = document.getElementById('change-outfit');
+    const board = document.getElementById('sketch-board');
+    if (!outfitBtn || !board) return;
+
+    const outfits = ['outfit-0','outfit-1','outfit-2','outfit-3','outfit-4'];
+    let i = 0; // starts at outfit-0
+
+    outfitBtn.addEventListener('click', () => {
+        // remove existing outfit classes
+        outfits.forEach(c => board.classList.remove(c));
+        i = (i + 1) % outfits.length;
+        board.classList.add(outfits[i]);
+    // show indicator with outfit name
+    try { showIndicator(['Spaceman','Sunset','Mint','Chill Out','Neon'][i], 1400); } catch(e) {}
+    });
+})();
+
+// Change mood: alternate temporary moods (surprised/sad) for 5s then revert to happy
+(function(){
+    const moodBtn = document.getElementById('change-mood');
+    const eyes = document.getElementById('eyes');
+    if (!moodBtn || !eyes) return;
+
+    // sequence: odd clicks -> surprised, even clicks -> sad
+    let clickCount = 0;
+    let revertTimer = null;
+
+    function setMood(tempMood){
+        // clear any previous mood classes
+        eyes.classList.remove('mood-happy','mood-surprised','mood-sad','mood-wink','mood-angry');
+        eyes.classList.add(tempMood);
+    }
+
+    moodBtn.addEventListener('click', () => {
+        clickCount++;
+        const temp = (clickCount % 2 === 1) ? 'mood-surprised' : 'mood-sad';
+
+        // apply temp mood and active button look
+        setMood(temp);
+        moodBtn.classList.add('btn-active');
+    // show indicator describing mood
+    try { showIndicator(temp === 'mood-surprised' ? 'Surprised' : 'Sad', 1600); } catch(e) {}
+
+        // reset revert timer
+        if (revertTimer) clearTimeout(revertTimer);
+        revertTimer = setTimeout(() => {
+            // revert back to happy after 5s
+            setMood('mood-happy');
+            moodBtn.classList.remove('btn-active');
+        }, 1600);
+    });
+})();
+
+</script>
+</body>
+</html>
