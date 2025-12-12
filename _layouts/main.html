@@ -41,6 +41,10 @@ layout: main
       margin: 0;
       padding: 0;
     }
+    img:not(.bg-icon) {
+      z-index: 10;
+      position: relative;
+    }
     header a {
       color: rgb(19, 0, 25);
       text-decoration: none;
@@ -151,6 +155,18 @@ layout: main
         row-gap: 40px;
       }
     }
+
+    body {
+      position: relative;
+    }
+    .bg-icon {
+      position: absolute;
+      width: 40px;
+      opacity: 0.2;
+      pointer-events: none;
+      z-index: 0;
+    }
+
   </style>
 </head>
 
@@ -211,6 +227,29 @@ layout: main
       &copy; 2025 AX MADWICK
     </div>
   </main>
+  <script>
+    function placeIcons(count = 100) {
+      const textElements = [...document.querySelectorAll('main')];
+      const textBoxes = textElements.map(el => el.getBoundingClientRect());
+
+      for (let i = 0; i < count; i++) {
+        const icon = document.createElement('img');
+        icon.src = '{{site.url}}/images/zap-24.svg';
+        icon.className = 'bg-icon';
+
+        x = Math.random() * window.innerWidth;
+
+        var _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
+        y = Math.random() * _docHeight;
+
+        icon.style.left = x + 'px';
+        icon.style.top = y + 'px';
+        document.body.appendChild(icon);
+      }
+    }
+
+    //placeIcons();
+  </script>
 </body>
 
 </html>
