@@ -2,7 +2,9 @@
 layout: main
 ---
 
+<div class="iframe-wrapper iframe-wrapper-16-9">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3GQyoocRDxA?si=JPgUA532STXgBKil" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 <div class="track__links">
 	<h3>Listen to "Driver's Seat"</h3>
