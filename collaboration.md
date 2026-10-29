@@ -26,11 +26,11 @@ Collaboration leads to outcomes that it wouldn't have been possible for one part
 
 In all successful musical collaborations I've been involved in over the course of 25 years in music I have never paid or been paid by another artist for collaboration. If we are working together on music we are a team, and we are in it together. First and foremost, let's make something dope together without money being exchanged in either direction.
 
-Secondly, as we all know, most independent artists are exactly raking it in. As such, I'm not really expecting to generate any revenue from my music. But in the off-chance that anything we make blows up, all parties involved in creating the music should benefit. The split should be determined before release based on both how much each party contributed, and also what, if any, resources either party will be investing on promotion. Let's be civil and respectful of each other and come to a reasonable agreement.
+Secondly, as we all know, most independent artists aren't exactly raking it in. As such, I'm not really expecting to generate any revenue from my music. But in the off-chance that anything we make blows up, all parties involved in creating the music should benefit. The split should be determined before release based on both how much each party contributed, and also what, if any, resources either party will be investing on promotion. Let's be civil and respectful of each other and come to a reasonable agreement.
 
 ## Credit
 
-One of my goals is to build "AX MADWICK" as an artist/brand. This can be a challenge on projects where I don't contribute vocals.
+One of my goals is to build "AX MADWICK" as an artist/brand. This can be a challenge on projects where I don't contribute vocals as producers credits are typically buried and never looked at by listeners.
 
 For truly collaborative endeavors I am a proponent of the Freddie Gibbs & Madlib approach where the music is released with both the vocalist/rapper and the producer as "primary artist". However I'm not opposed to contributing my music to other artists projects as "producer" credit only, as long as they support my mission to build a name for myself.
 
