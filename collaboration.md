@@ -6,6 +6,8 @@ permalink: /collaboration/
 
 # Collaboration
 
+<img src="{{site.url}}/images/ax_oct_2026@300x300.jpg" alt="A photo of me">
+
 ## Summary
 
 - **Philosophy:** I am very interested in collaborating with like-minded artists to make dope music together.
