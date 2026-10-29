@@ -35,7 +35,14 @@ layout: main
     html,
     body {
       background-color: rgb(19, 0, 25);
-      background-image: linear-gradient(to top left, rgb(15, 0, 20), rgb(45, 20, 50));
+      background-image: 
+        url('{{site.url}}/images/overlay2.jpg'), 
+        linear-gradient(to top left, rgb(15, 0, 20), rgb(45, 20, 50));
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-blend-mode: color;
       color: white;
       font-family: 'Source Sans Pro', sans-serif;
       margin: 0;
