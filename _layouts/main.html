@@ -90,6 +90,33 @@ layout: main
       display: inline-block;
       padding-right: 20px;
     }
+nav a {
+  text-decoration: none;
+  display: inline-block;
+  
+  /* Your beautiful pale pastel gradient base */
+  background: linear-gradient(135deg, #d1fffe 0%, #ffd1ff 60%, #fffed1 100%);
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* Smooth transition for both the background gradient and the glow filter */
+  transition: background 0.3s ease, filter 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  /* Shifts seamlessly into the intense, vibrant original glitch palette */
+  background: linear-gradient(135deg, #00fffc 0%, #fc00ff 60%, #fffc00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* Adds a matching, ethereal cyber-glow */
+  filter: drop-shadow(0 0 6px rgba(0, 255, 252, 0.6)) 
+          drop-shadow(0 0 12px rgba(252, 0, 255, 0.3));
+          
+  /* Optional: a tiny lift to make it feel extra responsive when hovered */
+  transform: translateY(-1px);
+}
     .track__art img {
       max-width: 100%;
     }
