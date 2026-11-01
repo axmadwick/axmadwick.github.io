@@ -32,7 +32,7 @@ title: Shiritori
 
 <h2>Lyrics</h2>
 
-<h3>VERSE 1 (AX MADWICK)</h3>
+<h3>Verse 1 (AX MADWICK)</h3>
 
 <p>
 	Shiritori<br>
@@ -56,7 +56,7 @@ title: Shiritori
 	CKY, I'm bumping tai mai shu
 </p>
 
-<h3>VERSE 2 (JYNS)</h3>
+<h3>Verse 2 (JYNS)</h3>
 <p>
 	Shiritori - the end is beginning<br>
 	It’s spinning. Karma is a wheel of constants<br>
@@ -81,7 +81,7 @@ title: Shiritori
 	Who’s winning<br>
 </p>
 
-<h3>VERSE 3 (shiv)</h3>
+<h3>Verse 3 (shiv)</h3>
 <p>
 	Nolan in this bitch Im beginning this shit with endings<br>
 	My ass on the gram cos my shit is always trending<br>

@@ -32,7 +32,7 @@ title: Facebook Friend
 
 <h2>Lyrics</h2>
 
-<h3>VERSE 1</h3>
+<h3>Verse 1</h3>
 <p>
 Remember when we got lost in the parking lot<br>
 It was the first night we camped out at Vibes<br>
@@ -47,7 +47,7 @@ And now you're posting MAGA memes<br>
 Now we're just<br>
 </p>
 
-<h3>HOOK</h3>
+<h3>Chorus</h3>
 <p>
 Facebook Friends<br>
 We used to be tight, now it's just pretend<br>
@@ -55,7 +55,7 @@ Facebook Friends<br>
 Saw pictures of your kids but we'll never meet again<br>
 </p>
 
-<h3>VERSE 2</h3>
+<h3>Verse 2</h3>
 <p>
 I almost forgot today was your birthday<br>
 It brings back all these old memories<br>
@@ -73,7 +73,7 @@ That I would've forgotten a long time ago on my own<br>
 But we're still<br>
 </p>
 
-<h3>HOOK</h3>
+<h3>Chorus</h3>
 <p>
 Facebook Friends<br>
 We used to be cool, way back when<br>
